@@ -25,26 +25,25 @@ export const SearchResults = ({ searchTerms }) => {
     const [editModal, setEditModal] = useState(false)
     const toggleEdit = () => setEditModal(!editModal)
 
-    useEffect(() => {
-        if (searchTerms !== "") {
-            const subset = games.filter(game => game.name.toLowerCase().includes(searchTerms))
-            setFiltered(subset)
-        } else {
-            setFiltered([])
-        }
-    }, [searchTerms, games])
+    // useEffect(() => {
+        
+    //   const subset = games.filter(game => game.name.toLowerCase().includes(searchTerms))
+    //         setFiltered(subset)
+      
+    //         setFiltered([])
+    //     },
+    //  [searchTerms, games])
 
     return (
         <div className="searchResults">
             <h3>Game Search</h3>
             <div className="games">
                 <button onClick={() => {
-                  const gameName = games.find(g => g.name === games.locationId)
-                  const gameID = games.find(g => g.id === games.locationId)
-                  const gamePicture = games.find(g => g.image.original_url === games.locationId)
+                  // const gameName = games.find(g => g.name === games.locationId)
+                  // const gameID = games.find(g => g.id === games.locationId)
+                  // const gamePicture = games.find(g => g.image.original_url === games.locationId)
                   // const customer = customers.find(c => c.id === games.customerId)
-
-                  setGame({ games })
+                  console.log(games)
                   toggle()
               }}>Enter</button>
             </div>

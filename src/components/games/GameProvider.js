@@ -12,23 +12,29 @@ const apiKey = '5f6c532c1e91441f5637a7fda58d7d9454bba96d';
  This component establishes what data can be used.
  */
 export const GameProvider = (props) => {
-    const [games, setGames] = useState([])
+  const [games, setGames] = useState([])
 
-    const getGames = () => {
-        return fetch(`https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json`)
-            .then(res => res.json())
-            .then(setGames)
-    }
 
-    useEffect(() => {
-      getGames()
-    }, [])
+  const getGames = () => {
+    return fetch(`https://www.giantbomb.com/api/search/?api_key=${apiKey}&format=json&limit=200&query="metroid"&resources=game`)
+      .then(res => res.json())
+      .then(info => {
+        for (let i = 0; i < info.results.length; i++) {
+          games.push(info.results[i])
+        }
+      })
+  }
 
-    return (
-        <GameContext.Provider value={{
-            games
-        }}>
-            {props.children}
-        </GameContext.Provider>
-    )
+
+  useEffect(() => {
+    getGames()
+  }, [])
+
+  return (
+    <GameContext.Provider value={{
+      getGames, games
+    }}>
+      {props.children}
+    </GameContext.Provider>
+  )
 }
