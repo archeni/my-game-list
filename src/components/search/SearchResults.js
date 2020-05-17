@@ -35,18 +35,18 @@ export const SearchResults = ({ searchTerms }) => {
     //  [searchTerms, games])
 
     return (
-        <div className="searchResults">
-            <h3>Game Search</h3>
-            <div className="games">
-                <button onClick={() => {
-                  // const gameName = games.find(g => g.name === games.locationId)
-                  // const gameID = games.find(g => g.id === games.locationId)
-                  // const gamePicture = games.find(g => g.image.original_url === games.locationId)
-                  // const customer = customers.find(c => c.id === games.customerId)
-                  console.log(games)
-                  toggle()
-              }}>Enter</button>
-            </div>
+        // <div className="searchResults">
+        //     <h3>Game Search</h3>
+        //     <div className="games">
+        //         <button onClick={() => {
+        //           // const gameName = games.find(g => g.name === games.locationId)
+        //           // const gameID = games.find(g => g.id === games.locationId)
+        //           // const gamePicture = games.find(g => g.image.original_url === games.locationId)
+        //           // const customer = customers.find(c => c.id === games.customerId)
+        //           console.log('hi')
+        //           toggle()
+        //       }}>Enter</button>
+        //     </div>
 
             {/* <Modal isOpen={editModal} toggle={toggleEdit}>
                 <ModalHeader toggle={toggleEdit}>
@@ -75,6 +75,6 @@ export const SearchResults = ({ searchTerms }) => {
                     }}>Delete</Button>
                 </ModalFooter>
             </Modal> */}
-        </div>
+        // </div>
     )
 }

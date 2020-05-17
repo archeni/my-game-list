@@ -17,7 +17,7 @@ export default () => {
     //         <LocationList />
     //     </LocationProvider>
     // )
-
+    
     // const showCustomers = () => (
     //     <CustomerProvider>
     //         <CustomerList />
@@ -55,7 +55,7 @@ export default () => {
                      <CustomerProvider>
                         <GameProvider>
                             <SearchBar setTerms={setTerms} />
-                            <SearchResults searchTerms={searchTerms} />
+                            {/* <SearchResults searchTerms={searchTerms} /> */}
                         </GameProvider>
                     </CustomerProvider>
                 {/* </AnimalProvider> */}

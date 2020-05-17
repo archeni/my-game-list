@@ -15,8 +15,8 @@ export const GameProvider = (props) => {
   const [games, setGames] = useState([])
 
 
-  const getGames = (pie) => {
-    return fetch(`https://www.giantbomb.com/api/search/?api_key=${apiKey}&format=json&limit=200&query="${pie}"&resources=game`)
+  const getGames = (searchTerm) => {
+    return fetch(`https://www.giantbomb.com/api/search/?api_key=${apiKey}&format=json&limit=200&query="${searchTerm}"&resources=game`)
       .then(res => res.json())
       .then(info => {
         for (let i = 0; i < info.results.length; i++) {
