@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react"
 import { CustomerProvider } from "./customer/CustomerProvider"
 import { GameProvider } from "./games/GameProvider"
 // import CustomerList from "./customer/CustomerList"
-import { SearchBar } from "./search/SearchBar"
+import  SearchBar  from "./search/SearchBar"
 import { SearchResults } from "./search/SearchResults"
 import "./GameList.css"
+import Logout from "./welcome/Logout"
 
 export default () => {
     const [searchTerms, setTerms] = useState(null)
@@ -49,19 +50,22 @@ export default () => {
     // }, [activeList])
 
     return (
-        <div className="mainContainer">
-            <div className="searchContainer">
+            <div className="mainContainer">
+                <h1>My Game List</h1>
+            <div className="dataContainer">
+              <div>
+                <Logout/>
+              </div>
+              <div className="searchContainer">
                 {/* <AnimalProvider> */}
-                     <CustomerProvider>
-                        <GameProvider>
+                    <CustomerProvider>
+                        {/* <GameProvider> */}
                             <SearchBar setTerms={setTerms} />
                             {/* <SearchResults searchTerms={searchTerms} /> */}
-                        </GameProvider>
+                        {/* </GameProvider> */}
                     </CustomerProvider>
                 {/* </AnimalProvider> */}
             </div>
-            <div className="dataContainer">
-                <h1>My Game List</h1>
                 <small>Where you can show your game love.</small>
                 <div className="listContainer">
                     <div className="links">

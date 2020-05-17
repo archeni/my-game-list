@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import { CustomerContext } from "../customer/CustomerProvider"
 import { Game } from "../games/Game"
-import { GameContext } from "../games/GameProvider"
+// import { GameContext } from "../games/GameProvider"
 import { Modal, ModalHeader, ModalBody, Button, ModalFooter } from "reactstrap"
 // import { EditAnimalForm } from "../animal/EditAnimalForm"
 
@@ -10,7 +10,7 @@ export const SearchResults = ({ searchTerms }) => {
     // const { animals, releaseAnimal } = useContext(AnimalContext)
     // const { customers } = useContext(CustomerContext)
     // const { locations } = useContext(LocationContext)
-    const { games } = useContext(GameContext)
+    // const { games } = useContext(GameContext)
 
     const [filteredGames, setFiltered] = useState([])
     const [selectedGame, setGame] = useState({
