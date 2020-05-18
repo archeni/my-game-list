@@ -1,0 +1,13 @@
+#searchTerms {
+  justify-content: center;
+}
+
+.form-group {
+  justify-content: right;
+  text-align: center;
+}
+
+.gameTitle {
+  text-align: center;
+  border-top: 5px dotted black;
+}

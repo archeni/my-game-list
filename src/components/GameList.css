@@ -1,3 +1,13 @@
+@import './search/SearchBar.css';
+
 h1 {
   text-align: center;
+}
+
+.navBar {
+  border: 20px solid black;
+}
+
+.mainContainer {
+  background-color: darkorchid;
 }
